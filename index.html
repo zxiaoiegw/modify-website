@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--Zhen Xiao 7/20/2023 Final Project-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/web.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar">
+          <div class="nav-logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+          </div>
+          <h1><a href="index.html">FILIPINO ASSOCIATION of GREATER KANSAS CITY</a></h1>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+            <li class="nav-item"><a href="member.html" class="nav-link">Members</a></li>
+            <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="process.html" class="nav-link">Process</a></li>
+          </ul>
+          <!-- search bar -->
+          <div class="search-wrapper">
+            <img src="images/search.png" alt="search" class="toggleButton begin-icon">
+            <div id="menu" class="search-container" style="display: none;">
+              <form class="search-form" action="#">
+                <input class="search-input" type="text" placeholder="Search..." name="search">
+                <img src="images/search.png" alt="search" class="toggleButton end-icon">
+              </form>
+            </div>
+          </div>
+          <!-- end of search  -->
+
+          <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </div><!-- close of hamburger class -->
+        </nav>
+      </header>
+    
+      <main class="main">
+        <div id="homehero">
+          
+        </div>
+        <div class="homepageDesc">
+          <p>
+            <a href="events.html">JOIN US AND FIND OUT HOW YOU CAN HELP!</a> 
+          </p>
+        </div>
+    
+        
+        <div id="galaImg"> </div>
+        
+        <div class="button">
+          <a href="events.html" class="button">Ticket Purchase</a>
+        </div>
+        
+        <h2>
+          Event Schedule
+        </h2>
+        <div class="row-event">
+          <div class="column1">
+            <!-- calendar -->
+            <div id="calendar"></div>
+            <!-- end of calendar -->
+          </div>
+          <div class="column2">
+            <h3 class="register"><em>Register Your Event</em></h3>
+            <hr>
+            <h4>July General Assembly Meeting</h4>
+            <p>FRIDAY, JULY 7, 2023 AT 6 PM</p>
+            <p>Filipino Culture Center</p>
+            <hr>
+            <div class="button">
+              <a href="events.html" class="button">View More</a>
+            </div>
+          </div>
+        </div>    
+        <br>
+        <div class="donate">
+          <p>We need your support!</p>
+          <button class="donate-button">Donate</button>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="column">
+          <p class="address">
+            Filipino Cultural Center<br>9810 W 79th St<br>Overland Park, KS 66204<br>816-888-4416
+          </p>
+        </div>
+        <div class="column">
+          <div class="facebook-container">
+            <a href="https://www.facebook.com/filipinoassociation" target="_blank"><img src="images/facebook.png" alt="logo"></a>
+            <p>Follow Us on Facebook!</p>
+          </div> 
+        </div>
+      </div>
+      <p class="copyright">&copy; 2006-2023, Filipino Association of Greater Kansas City</p>
+      <br>
+    </footer>
+    <script src="js/script.js"></script>  
+  </body>
+</html>

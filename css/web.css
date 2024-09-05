@@ -1,0 +1,643 @@
+/*Zhen Xiao 7/20/2023 Final Project*/
+
+:root {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    position: relative;
+    width: 100%;
+    background-color: #ffffee;
+    margin-left: 0;
+} 
+
+.wrapper {
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: .5em 1em;
+}
+
+/* header section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #ec5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main a{
+    color: #fff;
+}
+
+.navbar > h1{
+    font-size: 1.2em;  
+}
+.navbar > h1 > a {
+    color: #fff;
+}
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+.nav-logo img {
+    opacity: 0.7; 
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+}
+
+
+/* search */
+
+  .search-wrapper {
+    position: relative;
+    float: right;
+  }
+  
+  .toggleButton {
+    cursor: pointer;
+    display: block;
+  }
+  
+  .search-container {
+    position: absolute;
+    top: 0; /* Position it at the toggleButton */
+    right: 0; /* Align it to the right */
+    width: 350px; 
+    background: #fff;
+  }
+  
+  .search-container input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    width: 100%; /* Use 100% so it matches the width of the search-container */
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    flex-grow: 1;  /* This makes the input take up the remaining space in the flex container */
+    margin-right: 10px; /*  Add some space between the input and the icon */
+  }
+
+  .begin-icon {
+    margin-top: 13px;
+    margin-left: 8em;
+}
+  
+  .end-icon {
+    order: 2;  /* This ensures the icon is at the end */
+  }
+/* end of search */
+
+/* this is styling for menu*/
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.nav-brand {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #08b;
+    flex-basis: 65%;
+    margin-left: 1em;
+}
+.hamburger {
+    display: block;
+    cursor: pointer;
+    flex-basis: 35%;
+    height: 70px;
+    padding-top: 1.5em;
+}
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: #08b;
+    transition: all .3s ease;
+}
+.nav-menu {
+    list-style: none;
+    margin-top: 4em;
+    padding: .5rem;
+    position: fixed;
+    left: -100%;
+    top: 55px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ec5;
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+}
+.nav-menu.active {
+    left:0;
+}
+.nav-item {
+    margin: 1em 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #08b;
+    font-weight: bold;
+    transition: .7s ease;
+}
+.nav-link:hover {
+    color: rgb(108, 12, 59);
+    transform: scaleY(2);
+    padding: .5em;
+    border-radius:5px;
+    background-color: #fff;
+
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+/* end of menu style */
+
+/* main */
+.main {
+    margin-top: 8.39em;
+}
+
+.main p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.main ul li {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+h1  { 
+    color: #333;
+    font-size: 1.5rem;
+    padding-left: 0;
+}
+
+h2  { color: #407386; 
+    margin-top: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 1px #cccccc;
+    font-family: Georgia, "Times New Roman", serif; }
+
+/* donation */
+.donate {
+    background-color:#eee;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}   
+.donate > p {
+    color: gray;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+} 
+.donate-button {
+    width: 8em;
+}
+
+/* end of main */
+
+
+/* footer */
+footer { 
+    background-color: #ec5;
+    padding: 2em 5em 0;
+}
+
+.facebook-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook-container img {
+    margin-top: 10px;
+    margin-right: 7px;
+}
+.facebook-container p {
+    margin-top: 25px;
+} 
+
+.address { 
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}  
+
+.copyright {
+    font-size: 75%;
+    text-align: center;
+    font-style: italic;
+    padding-top: 2em ;
+}
+/* end of footer */
+
+/* button */
+.main button, a.button {
+    color: #fff;
+    background-color: #0066ff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main button, a.button:hover {
+    background-color: #0055cc;
+}
+
+.button {
+    display: flex;
+    justify-content: center; 
+}
+a {
+    text-decoration: none;
+}
+/* end of button style */
+
+/* calendar */
+#calendar {
+    max-width: 400px;
+    margin: 4em auto 1em;
+  }
+  
+  .month {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .weekdays span {
+    flex-basis: calc(100% / 7);
+    text-align: center;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day {
+    text-align: center;
+    padding: 5px;
+    background-color: #eee;
+  }
+/* end of calendar */
+
+/* home page */
+#homehero {
+    height: 400px;
+    width: 100%;
+    background-image: url(../images/meeting.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+}
+.homepageDesc {
+    background-color: #ec5;
+    padding: .5em;
+}
+.homepageDesc>p {
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+#galaImg {
+    height: 400px;
+    background-image: url(../images/gala.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+main .form {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.register { color: #29485d;
+    text-align: center; }
+
+/* end of home page */
+
+/* about page */
+#centerhero {
+    height: 300px;
+    background-image: url(../images/center.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/* end of about page */
+
+/* events page */
+.events {
+    /* margin-top: 1em; */
+    padding: 1em;
+    text-align: center;
+    background-color: #0194b5;
+}
+.events>h2 {
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+#eventdiv, #eventdiv1, #eventdiv2 {
+    display: flex;
+    justify-content: center; 
+}
+.eventButton {
+    width: 35em;
+}
+a {
+  text-decoration: none;
+}
+
+#redCrossIma {
+    height: 400px;
+    background-image: url(../images/redCross.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2em;
+}
+
+#fiestaIma {
+    height: 400px;
+    background-image: url(../images/fiesta.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 3.5em;
+}
+
+.eventTitle {
+    padding-left: .5em;
+}
+/* end of events page */
+
+/* member page */
+#member {
+    height: 250px;
+    background-image: url(../images/member.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+/* end of member page */
+
+/* donate page */
+#donateImg {
+    height: 250px;
+    background-image: url(../images/donate.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.main h1 {
+    color: #333;
+    text-align: center;
+}
+
+.main ol li {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#paypal-donate {
+    display: flex;
+    top: 50px;
+}
+/* end of donate page */
+
+/* contact page */
+#contactIma {
+    height: 300px;
+    background-image: url(../images/filipino.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#contactIma>h2{
+    padding-top: 2em;
+    font-size: 3.5em;
+    text-align: center;
+    color: #fff;
+}
+
+.facebook-button {
+    padding: 15px 23px;
+    display: inline-flex;
+    align-items: center;
+}
+.facebook-button > a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.facebook-button > a img {
+    margin-right: 10px; 
+  }
+
+
+#map {
+    height: 400px;
+    background-image: url(../images/map.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 2em;
+}
+
+.contactPage {
+    margin-top: 2em;
+    font-size: 1.5em;
+    color: #666;
+}
+.contactPage>p>a{
+    color: #666;
+}
+/* end of contact page */
+
+
+/* tablet-medium viewport */
+@media (min-width:48em) {
+    .wrapper {
+        width: 85%;
+    }
+
+    .nav-logo img {
+        width: 200px;
+    }
+
+    .nav-brand {
+        flex: 3 33%;
+    }
+
+    .navbar > h1{
+        font-size: 1.2em;  
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 3em;
+    }
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+
+    .begin-icon {
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .search-container {
+        
+        top: 60%; 
+        
+    }
+
+    #centerhero {
+        height: 400px;
+    }
+    #member {
+        height: 400px;
+    }
+    #map {
+        height: 500px;
+    }
+    #donateImg {
+        height: 400px;
+    }
+    /* footer */
+    .row {
+        display: flex;
+        
+    }
+    .column {
+        flex: 1;
+        
+        text-align:center;
+    }
+
+    .facebook-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .facebook-container p {
+        margin-top: 25px;
+    }
+}
+
+/* desktop or large viewport */
+@media (min-width:64em) {
+    .wrapper {
+        width: 70%;
+    }
+
+    .nav-logo img {
+        width: 250px;
+    }
+
+    .navbar > h1{
+        font-size: 2em;  
+    }
+
+    .begin-icon {
+        margin-left: 30px;
+    }
+
+    #centerhero {
+        height: 500px;
+    }
+
+    #member {
+        height: 400px;
+    }
+
+    #contactIma {
+        height: 500px;
+    }
+    
+    #contactIma>h1{
+        padding-top: 3em;
+        font-size: 5em;
+    }
+    .contactPage {
+        margin-top: 2.5em;
+        font-size: 2em;
+    }
+    #map {
+        height: 600px;
+    }
+    #donateImg {
+        height: 500px;
+    }
+    /* event calendar */
+    .row-event {
+        display: flex;
+        align-items: stretch;
+    }
+    .column1 {
+        flex: 1;
+    }
+    .column2 {
+        flex: 1;
+        margin-top: 2.8em;
+        margin-left: 3em; /* Adjust the spacing between the sections */
+      }   
+}
+
